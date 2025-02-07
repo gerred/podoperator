@@ -1,0 +1,12 @@
+apiVersion: workloads.sfcompute.com/v1
+kind: Workload
+metadata:
+  labels:
+    app.kubernetes.io/name: podoperator
+    app.kubernetes.io/managed-by: kustomize
+  name: test-workload
+  namespace: podoperator-system
+spec:
+  image: nginxinc/nginx-unprivileged:latest
+  ports:
+    - "32080:80"
