@@ -1,8 +1,8 @@
 # podoperator
-// TODO(user): Add simple overview of use/purpose
+A Kubernetes operator for managing containerized workloads with simplified port mapping and service exposure.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+The Pod Operator simplifies the deployment and management of containerized applications in Kubernetes clusters. It provides a streamlined way to run containers with automatic service creation and port mapping, abstracting away the complexity of manually managing Pods, Services, and other Kubernetes resources. The operator watches Workload custom resources that specify container images and port mappings, then automatically handles the creation and lifecycle management of the necessary Kubernetes resources.
 
 ## Getting Started
 
@@ -21,7 +21,7 @@ make docker-build docker-push IMG=<some-registry>/podoperator:tag
 
 **NOTE:** This image ought to be published in the personal registry you specified.
 And it is required to have access to pull the image from the working environment.
-Make sure you have the proper permission to the registry if the above commands don’t work.
+Make sure you have the proper permission to the registry if the above commands don't work.
 
 **Install the CRDs into the cluster:**
 
@@ -111,7 +111,15 @@ previously added to 'dist/chart/values.yaml' or 'dist/chart/manager/manager.yaml
 is manually re-applied afterwards.
 
 ## Contributing
-// TODO(user): Add detailed information on how you would like others to contribute to this project
+Contributions to the Pod Operator project are welcome! Here's how you can contribute:
+
+1. Fork the repository and create your feature branch
+2. Write tests for any new functionality
+3. Ensure all tests pass with `make test`
+4. Submit a pull request with a clear description of your changes
+5. Follow the project's coding standards and documentation practices
+
+For bug reports or feature requests, please open an issue in the GitHub repository.
 
 **NOTE:** Run `make help` for more information on all potential `make` targets
 
@@ -132,4 +140,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
